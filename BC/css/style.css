@@ -1,0 +1,23 @@
+@charset "utf-8";
+.flex {
+    display: flex;
+  }
+body {
+    background-color: #3f3f3f;
+  }
+
+
+.p1{
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.p2{
+    color: #ffffff;
+}
+.p3{
+    color: #ffffff;
+}
+.p4{
+    color: #ffffff;
+}
