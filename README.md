@@ -2,5 +2,5 @@
 
 ![サンプル2](./picture/kouji_rammer.png)
 
-# UI
+# UI　イメージ
 ![サンプル1](./picture/ui.png)
