@@ -17,8 +17,8 @@ chrome.tabs.query({
     document.getElementById('test').innerText = url_text
 });
 
-xhr.open('POST','http://52.194.67.163', true);
+xhr.open('POST','', true);
 xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
-xhr.send('url=ハッサンのおちんちん')
+xhr.send('url=')
 
 //ここからPOSTがおくれないなぞすぎる
