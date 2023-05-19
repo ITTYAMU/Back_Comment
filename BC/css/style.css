@@ -3,7 +3,7 @@
     display: flex;
   }
 body {
-    background-color: #3f3f3f;
+    background-color: #202729;
   }
 
 
@@ -19,5 +19,8 @@ body {
     color: #ffffff;
 }
 .p4{
+    color: #ffffff;
+}
+.p5{
     color: #ffffff;
 }
