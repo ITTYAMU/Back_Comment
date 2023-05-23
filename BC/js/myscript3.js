@@ -17,7 +17,7 @@ chrome.tabs.query({
     document.getElementById('test').innerText = url_text
 });
 
-xhr.open('POST','', true);
+xhr.open('POST','http://52.194.67.163/BackComment/notePad.html', true);
 xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
 xhr.send('url=')
 
