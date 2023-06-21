@@ -7,3 +7,4 @@
   };
   chrome.windows.create(createDate, () => {});
 }
+

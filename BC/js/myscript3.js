@@ -15,8 +15,20 @@ chrome.tabs.query({
     document.getElementById('test').innerText = url_text
 });
 
-xhr.open('POST','http://52.194.67.163/BackComment/notePad.html', true);
-xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
-xhr.send('url=キツツキ')
 
-//ここからPOSTがおくれないなぞすぎる
+
+
+const data = 'Hello World！'; // 渡したいデータ（配列やオブジェクトでも可）
+
+fetch('http://52.194.67.163/BackComment/request.php', { // 第1引数に送り先
+    method: 'POST', // メソッド指定
+    headers: { 'Content-Type': 'application/json' }, // jsonを指定
+    body: JSON.stringify(data) // json形式に変換して添付
+})
+    .then(response => response.json()) // 返ってきたレスポンスをjsonで受け取って次のthenへ渡す
+    .then(res => {
+        console.log(res); // やりたい処理
+    })
+    .catch(error => {
+        console.log(error); // エラー表示
+    });
