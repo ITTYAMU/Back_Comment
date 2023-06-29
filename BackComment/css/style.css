@@ -1,0 +1,26 @@
+@charset "utf-8";
+.flex {
+    display: flex;
+  }
+body {
+    background-color: #202729;
+  }
+
+
+.p1{
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.p2{
+    color: #ffffff;
+}
+.p3{
+    color: #ffffff;
+}
+.p4{
+    color: #ffffff;
+}
+.p5{
+    color: #ffffff;
+}

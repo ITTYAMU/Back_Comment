@@ -1,0 +1,17 @@
+﻿{
+  "name": "Back_Comment",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Back_Comment",
+  "author": "ITTYAMU",
+  "permissions": [
+    "tabs"
+  ],
+  "action": {
+    "default_title": "Back Comment",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "32": "icon/Back_Comment.png"
+    }
+  }
+}
