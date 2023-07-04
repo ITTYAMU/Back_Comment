@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+  <meta charset="utf-8"/>
+  <title>非同期通信</title>
+  <script>
+    /* id の場所に、obj の内容をリスト形式で出力する */
+    function printResult(obj, id) {
+      const result = document.getElementById(id);
+      const ul = document.createElement('ul');
+      for (const [key, value] of Object.entries(obj)) {
+        let li = document.createElement('li');
+        if (key == 'received') {
+          li.textContent = `${key}: ${JSON.stringify(value)}`;
+        } else {
+          li.textContent = `${key}: ${value}`;
+        }
+        ul.appendChild(li);
+      }
+      result.appendChild(ul);
+    }
+
+    /* ボタンクリックなので同期通信だが、非同期のfetch()使用 */
+    function execFetch() {
+      // 送信先
+      const SERVER= 'http://192.168.179.4/00_access_fetch/fetch_receive.php';
+
+      // 送信するデータ(オブジェクト)
+      const data = {URL: 'http://www.hoge.com'};
+
+      // 非同期で送信
+      fetch(SERVER, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data) // json形式に変換して送信
+      })
+      .then(response => {
+        // 非同期レスポンス(response)から、
+        // jsonに変換可能なpromiseオブジェクトを得て、次のthenへ
+        console.log(response);
+        return response.json();
+      })
+      .then(data => {
+        console.log(data);
+        printResult(data, 'result');
+      })
+      .catch(error => {
+        console.log(error);
+      });
+    }
+  </script>
+  </head>
+  <body>
+    <div>
+      ボタンクリックでサーバに「フェッチ」：
+      <button onclick="execFetch()">fetch</button>
+    </div>
+    <div>【応答】
+      <div id="result"></div>
+    </div>
+  </body>
+</html>
